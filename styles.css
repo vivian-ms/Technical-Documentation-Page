@@ -146,3 +146,43 @@ body {
   font-size: 0.7rem;
 }
 /* ########## End main ########## */
+
+
+
+/* ########## Media Query ########## */
+@media screen and (min-width: 700px) {
+  /* Change to side navbar when screen >= 700px */
+  #navbar {
+    bottom: 0px;
+    width: 280px;
+    border-right: 1px solid mediumpurple;
+    overflow: auto;
+  }
+
+  #navbar header {
+    cursor: default;
+  }
+
+  #navbar h1 {
+    border-bottom: 1px solid mediumpurple;
+  }
+
+  #navbar li {
+    display: list-item;
+    margin: 0px;
+    text-align: center;
+  }
+
+  #navbar li:not(:last-child) {
+    border-bottom: 1px solid mediumpurple;
+  }
+
+  /* Move #main-doc back to top of screen and next to sidebar */
+  #main-doc {
+    position: absolute;
+    left: 290px;
+    top: 0px;
+    padding: 10px;
+  }
+}
+/* ########## End Media Query ########## */
