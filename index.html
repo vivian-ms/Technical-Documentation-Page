@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Technical Documentation Page</title>
   </head>
   <body>
     <main id="main-doc">
       <!-- ********** Introduction section ********** -->
-      <section id="introduction">
+      <section id="introduction" class="main-section">
         <header>
           <h2>Introduction</h2>
         </header>
@@ -55,7 +56,7 @@
       <hr>
 
       <!-- ********** Grid container section ********** -->
-      <section id="grid_container">
+      <section id="grid_container" class="main-section">
         <header>
           <h2>Grid Container</h2>
         </header>
@@ -64,7 +65,7 @@
           A grid starts with the grid container. A grid container is created by declaring <code>display: grid</code> or <code>display: inline-grid</code> on an element. All the direct children of that element becomes grid items. In the example below, <code>.wrapper</code> is a grid container and its children are grid items.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -72,7 +73,7 @@
   &lt;div&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
 }</pre>
 
@@ -80,7 +81,7 @@
           Using only the <code>border</code>, <code>border-radius</code>, <code>background-color</code>, <code>padding</code>, and <code>color</code> properties on the grid container and grid items, the code above will be displayed like the image below.
         </p>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/The_Grid_container?revision=1473793" width="610" height="280"></iframe>
         </p>
       </section>  <!-- End #grid_container -->
@@ -88,7 +89,7 @@
       <hr>
 
       <!-- ********** Grid tracks section ********** -->
-      <section id="grid_tracks">
+      <section id="grid_tracks" class="main-section">
         <header>
           <h2>Grid Tracks</h2>
         </header>
@@ -101,7 +102,7 @@
           Using the code above, we can add the <code>grid-template-columns</code> property to create a grid with three 200-pixel-wide column tracks. Each child item will be automatically placed in each grid cell.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -109,12 +110,12 @@
   &lt;div&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: 200px 200px 200px;
 }</pre>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/grid_first?revision=1473793" width="610" height="140"></iframe>
         </p>
 
@@ -123,7 +124,7 @@
           Tracks can be defined using any length unit. Grid also introduces an additional length unit to help create flexible grid tracks. The new <code>fr</code> unit represents a fraaction of the available space in the grid container. The example below uses <code>fr</code> to create three equal width tracks that grow and shrink according to the available space.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -131,12 +132,12 @@
   &lt;div&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }</pre>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/fr_unit_ls?revision=1473793" width="610" height="140"></iframe>
         </p>
 
@@ -144,7 +145,7 @@
           In the following example, the available space is split into four, where two parts are given to the first track and one part each to the next two tracks.
         </p>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }</pre>
@@ -153,7 +154,7 @@
           The example below mixes absolute sized tracks with fraction units. A fixed width of 500px is taken for the first track and the remaining space is divided into three and assigned in proportion to the two flexible tracks.
         </p>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: 500px 1fr 2fr;
 }</pre>
@@ -163,14 +164,14 @@
           Large grid with many tracks can use the <code>repeat()</code> notation, to repeat all or a section of the track listing. For example,
         </p>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }</pre>
 
         <p>Can also be written as:</p>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }</pre>
@@ -179,7 +180,7 @@
           Repeat notation can be used for a part of the track listing. In the example below, the grid has an initial 20px track, a repeating section of 6 <code>1fr</code> tracks, and a final 20px track.
         </p>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: 20px repeat(6, 1fr) 20px;
 }</pre>
@@ -188,7 +189,7 @@
           Repeat notation takes the track listing and uses it to create a repeating pattern of tracks. In the example below, the grid will consist of 10 tracks: a <code>1fr</code> track followed by a <code>2fr</code> track repeated five times.
         </p>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr, 2fr);
 }</pre>
@@ -210,7 +211,7 @@
           The example below uses <code>grid-auto-rows</code> to ensure that tracks created in the implicit grid are 200px tall.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -218,13 +219,13 @@
   &lt;div&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
 }</pre>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/The_implicit_and_explicit_grid?revision=1473793" width="610" height="420"></iframe>
         </p>
 
@@ -237,7 +238,7 @@
           Grid has a solution for this with the <code>minmax()</code> function. The example below uses <code>minmax()</code> in the value of <code>grid-auto-rows</code>. It will automatically create rows with a minimum height of 100px and a maximum of <code>auto</code>. Using <code>auto</code> means that the height of that row will be the height of the cell with the tallest item.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two
     &lt;p&gt;I have some more content in.&lt;/p&gt;
@@ -248,13 +249,13 @@
   &lt;div&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
 }</pre>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/Track_sizing_and_minmax()?revision=1473793" width="610" height="280"></iframe>
         </p>
       </section>  <!-- End #grid_tracks -->
@@ -262,7 +263,7 @@
       <hr>
 
       <!-- ********** Grid lines section ********** -->
-      <section id="grid_lines">
+      <section id="grid_lines" class="main-section">
         <header>
           <h2>Grid Lines</h2>
         </header>
@@ -290,7 +291,7 @@
           The second item starts on grid column 1 and spans one track. This is the default so there's no need to specify the end line. It also spans two row tracks from row line 3 to row line 5. The other items will automatically place themselves into empty spaces on the grid.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -298,7 +299,7 @@
   &lt;div class="box5"&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -317,7 +318,7 @@
   grid-row-end: 5;
 }</pre>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/Positioning_items_against_lines?revision=1473793" width="610" height="410"></iframe>
         </p>
       </section>  <!-- End #grid_lines -->
@@ -325,7 +326,7 @@
       <hr>
 
       <!-- ********** Grid cells section ********** -->
-      <section id="grid_cells">
+      <section id="grid_cells" class="main-section">
         <header>
           <h2>Grid Cells</h2>
         </header>
@@ -340,7 +341,7 @@
       <hr>
 
       <!-- ########## Grid areas section ########## -->
-      <section id="grid_areas">
+      <section id="grid_areas" class="main-section">
         <header>
           <h2>Grid Areas</h2>
         </header>
@@ -355,7 +356,7 @@
       <hr>
 
       <!-- ########## Gutters section ########## -->
-      <section id="gutters">
+      <section id="gutters" class="main-section">
         <header>
           <h2>Gutters</h2>
         </header>
@@ -364,7 +365,7 @@
           Gutters or alleys between grid cells can be created using the <code>column-gap</code> and <code>row-gap</code> properties, or the shorthand <code>gap</code> property. The example below has a 10px gap between columns and a <code>1em</code> gap between rows.
         </p>
 
-        <pre>&lt;div class="wrapper"&gt;
+        <pre class="code">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -372,18 +373,18 @@
   &lt;div&gt;Five&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-        <pre>.wrapper {
+        <pre class="code">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
   row-gap: 1em;
 }</pre>
 
-        <p>
+        <p class="iframe-container">
           <iframe src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout$samples/Gutters?revision=1473793" width="610" height="140"></iframe>
         </p>
 
-        <div>
+        <div class="note">
           <p>
             <strong>Note: </strong>When grid first shipped in browsers, the <code>column-gap</code>, <code>row-gap</code>, and <code>gap</code> were prefixed with the <code>grid-</code> prefix as <code>grid-column-gap</code>, <code>grid-row-gap</code>, and <code>grid-gap</code> respectively.
           </p>
@@ -401,13 +402,13 @@
       <hr>
 
       <!-- ########## References section ########## -->
-      <section id="references">
+      <section id="references" class="main-section">
         <header>
           <h2>References</h2>
         </header>
 
         <h3>CSS Grid Properties</h3>
-        <ul>
+        <ul class="reference_list">
           <li><code>grid-template-columns</code></li>
           <li><code>grid-template-rows</code></li>
           <li><code>grid-template-areas</code></li>
@@ -429,7 +430,7 @@
         </ul>
 
         <h3>CSS Grid Functions</h3>
-        <ul>
+        <ul class="reference_list">
           <li><code>repeat()</code></li>
           <li><code>minmax()</code></li>
           <li><code>fit-content()</code></li>

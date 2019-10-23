@@ -1,7 +1,79 @@
 body {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
   background: lavender;
 }
+
+/* ########## Main ########## */
+#main-doc {
+  padding: 10px;
+  line-height: 2.5rem;
+}
+
+#main-doc h2 {
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+  background: #bbb3ff;
+}
+
+#main-doc h3 {
+  padding: 5px;
+  background: #d4ceff;
+}
+
+#main-doc hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: none;
+  height: 5px;
+  background: mediumpurple;
+  color: mediumpurple;
+}
+
+#main-doc code {
+  padding: 5px;
+}
+
+.code {
+  padding: 20px;
+}
+
+#main-doc code, .code {
+  background: #d9d4ff;
+  color: blue;
+  font-family: 'Courier New';
+  font-weight: bold;
+}
+
+.iframe-container {
+  max-width: 630px;
+}
+
+#main-doc iframe {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 0px;
+}
+
+#main-doc img {
+  width: 610px;
+}
+
+.note {
+  padding: 10px;
+  background: #c9c4e8;
+}
+
+.reference_list {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+}
+
+.reference_list li {
+  margin-right: 20px;
+}
+/* ########## End main ########## */
 
 .author {
   font-size: 0.7rem;
