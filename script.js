@@ -13,18 +13,15 @@ $(function() {
 function resizeMenu() {
   let w = window.innerWidth;
 
-  // If screen width < 700px, display arrow
+  // If screen width < 700px, show menu icon, remove .menu_open and hide menu
   if (w < 700) {
-    if ($('#navbar li').css('display') === 'none') {
-      // If nav list is hidden, display arrow up
-      $('#arrow').html('&#xfe3f;');
-    } else {
-      // If nav list is shown, display arrow down
-      $('#arrow').html('&#xfe40;');
-    }
+    $('#menu_icon').css('display', 'inline-block').removeClass('menu_open');
+    $('.list_container').css('display', 'none');
+
+    // Else (sceen width >= 700px), hide menu icon and show menu
   } else {
-    // If screen width > 700px, don't display arrow
-    $('#arrow').text('');
+    $('#menu_icon').css('display', 'none');
+    $('.list_container').css('display', 'block');
   }
 }
 
@@ -32,16 +29,9 @@ function resizeMenu() {
 function toggleMenu() {
   let w = window.innerWidth;
 
+  // If screen width < 700px, toggle menu and animate menu icon on click
   if (w < 700) {
-    // If screen width < 700px, toggle #navbar li display (none <-> inline-block) on #navbar header click
-    $('#navbar li').toggleClass('showMenu');
-
-    if ($('#navbar li').css('display') === 'none') {
-      // If nav list is hidden, display arrow up
-      $('#arrow').html('&#xfe3f;');
-    } else {
-      // If nav list is shown, display arrow down
-      $('#arrow').html('&#xfe40;');
-    }
+    $('.list_container').slideToggle();
+    $('#menu_icon').toggleClass('menu_open');
   }
 }
