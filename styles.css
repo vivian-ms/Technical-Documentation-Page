@@ -25,6 +25,13 @@ body {
   text-decoration: underline;
   background: #d9d4ff;
 }
+
+.fixed-left {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 /* ########## End Navbar ########## */
 
 
