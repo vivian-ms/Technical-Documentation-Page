@@ -9,46 +9,42 @@
     <title>Technical Documentation Page</title>
   </head>
   <body>
-    <!-- ********** Navbar ********** -->
-    <nav id="navbar">
-      <header>
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light">
+      <header class="navbar-brand">
         <h1>CSS Grid Documentation</h1>
-        <div id="menu_icon">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
       </header>
-
-      <div class="link_container">
-        <ul>
-          <li>
-            <a href="#introduction" class="nav-link">Introduction</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsable_navbar" aria-controls="collapsable_navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsable_navbar">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#introduction">Introduction</a>
           </li>
-          <li>
-            <a href="#grid_container" class="nav-link">Grid Container</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#grid_container">Grid Container</a>
           </li>
-          <li>
-            <a href="#grid_tracks" class="nav-link">Grid Tracks</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#grid_tracks">Grid Tracks</a>
           </li>
-          <li>
-            <a href="#grid_lines" class="nav-link">Grid Lines</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#grid_lines">Grid Lines</a>
           </li>
-          <li>
-            <a href="#grid_cells" class="nav-link">Grid Cells</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#grid_cells">Grid Cells</a>
           </li>
-          <li>
-            <a href="#grid_areas" class="nav-link">Grid Areas</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#grid_areas">Grid Areas</a>
           </li>
-          <li>
-            <a href="#gutters" class="nav-link">Gutters</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#gutters">Gutters</a>
           </li>
-          <li>
-            <a href="#references" class="nav-link">References</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#references">References</a>
           </li>
-        </ul>
-      </div>  <!-- End .link_container -->
-    </nav>  <!-- End navbar -->
+        </ul>  <!-- End .navbar-nav -->
+      </div>  <!-- End .navbar-collapse -->
+    </nav>  <!-- End .navbar -->
 
     <main id="main-doc" class="position-absolute">
       <!-- ********** Introduction section ********** -->
@@ -495,7 +491,8 @@
     </main>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
