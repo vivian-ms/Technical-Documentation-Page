@@ -1,6 +1,5 @@
 body {
   position: relative;
-  margin: 0px;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   background: lavender;
@@ -92,26 +91,27 @@ body {
 
 /* ########## Main ########## */
 #main-doc {
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  right: 0px;
+  margin-top: 5px;
   padding: 10px;
   line-height: 2.5rem;
 }
 
-#main-doc h2 {
-  padding: 10px;
+.section_title {
+  padding: 15px 10px;
   font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
   background: #bbb3ff;
 }
 
-#main-doc h3 {
-  padding: 5px;
+.section_subtitle {
+  padding: 10px 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
   background: #d4ceff;
 }
 
-#main-doc hr {
+.divider {
   margin-top: 50px;
   margin-bottom: 50px;
   border: none;
@@ -126,27 +126,22 @@ body {
 
 .code {
   padding: 20px;
+  line-height: 1.5rem;
 }
 
 #main-doc code, .code {
   background: #d9d4ff;
   color: blue;
-  font-family: 'Courier New';
-  font-weight: bold;
 }
 
 .iframe-container {
-  max-width: 630px;
+  max-width: 650px;
 }
 
 #main-doc iframe {
   width: calc(100% - 20px);
   padding: 10px;
-  border: 0px;
-}
-
-#main-doc img {
-  width: 610px;
+  border: none;
 }
 
 .note {
