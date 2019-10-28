@@ -1,6 +1,5 @@
 body {
   position: relative;
-  margin: 0px;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   background: lavender;
@@ -9,82 +8,29 @@ body {
 
 
 /* ########## Navbar ########## */
-#navbar {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-  width: 100%;
+.navbar {
   background: #cfc9ff;
 }
 
-#navbar header {
-  position: relative;
-  cursor: pointer;
-}
-
-#navbar h1 {
-  padding: 20px 10px;
-  margin: 0px;
+.navbar-brand h1 {
   font-family: 'Oswald', sans-serif;
-  text-align: center;
 }
 
-/* Hide nav links on load and use jQuery to decide whether to show or not */
-.list_container {
-  display: none;
-}
-
-#navbar ul {
-  display: flex;
-  flex-flow: row wrap;
-
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-  background: #d9d4ff;
-}
-
-#navbar li {
-  padding: 20px;
-  margin: 0px;
-  text-align: center;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-weight: bold;
+.navbar-nav .nav-item .nav-link {
   color: blue;
 }
 
-/* ********** Menu icon ********** */
-#menu_icon {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-
-  display: none;
-  cursor: pointer;
+.navbar-nav .nav-item:hover {
+  color: blue;
+  text-decoration: underline;
+  background: #d9d4ff;
 }
 
-.bar {
-  width: 35px;
-  height: 5px;
-  margin: 5px 0px;
-  background: blue;
-  transition: 0.5s;
-}
-
-.menu_open #bar1 {
-  transform: rotate(-45deg) translate(-9px, 4px);
-}
-
-.menu_open #bar2 {
-  opacity: 0;
-}
-
-.menu_open #bar3 {
-  transform: rotate(45deg) translate(-10px, -5px);
+.fixed-left {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 /* ########## End Navbar ########## */
 
@@ -92,26 +38,27 @@ body {
 
 /* ########## Main ########## */
 #main-doc {
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  right: 0px;
+  margin-top: 5px;
   padding: 10px;
   line-height: 2.5rem;
 }
 
-#main-doc h2 {
-  padding: 10px;
+.section_title {
+  padding: 15px 10px;
   font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
   background: #bbb3ff;
 }
 
-#main-doc h3 {
-  padding: 5px;
+.section_subtitle {
+  padding: 10px 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
   background: #d4ceff;
 }
 
-#main-doc hr {
+.divider {
   margin-top: 50px;
   margin-bottom: 50px;
   border: none;
@@ -126,27 +73,22 @@ body {
 
 .code {
   padding: 20px;
+  line-height: 1.5rem;
 }
 
 #main-doc code, .code {
   background: #d9d4ff;
   color: blue;
-  font-family: 'Courier New';
-  font-weight: bold;
 }
 
 .iframe-container {
-  max-width: 630px;
+  max-width: 650px;
 }
 
 #main-doc iframe {
   width: calc(100% - 20px);
   padding: 10px;
-  border: 0px;
-}
-
-#main-doc img {
-  width: 610px;
+  border: none;
 }
 
 .note {
@@ -168,47 +110,3 @@ body {
   font-size: 0.7rem;
 }
 /* ########## End main ########## */
-
-
-
-/* ########## Media Query ########## */
-@media screen and (min-width: 700px) {
-  /* Change to side navbar when screen >= 700px */
-  #navbar {
-    bottom: 0px;
-    width: 280px;
-    border-right: 1px solid mediumpurple;
-    overflow: auto;
-  }
-
-  #navbar header {
-    cursor: default;
-  }
-
-  #navbar h1 {
-    border-bottom: 1px solid mediumpurple;
-  }
-
-  #navbar ul {
-    display: block;
-  }
-
-  #navbar li {
-    display: list-item;
-    margin: 0px;
-    text-align: center;
-  }
-
-  #navbar li:not(:last-child) {
-    border-bottom: 1px solid mediumpurple;
-  }
-
-  /* Move #main-doc back to top of screen and next to sidebar */
-  #main-doc {
-    position: absolute;
-    left: 290px;
-    top: 0px;
-    padding: 10px;
-  }
-}
-/* ########## End Media Query ########## */
