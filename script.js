@@ -75,8 +75,8 @@ function checkMediaQuery() {
     $('.navbar-brand h1').css('font-size', '');
 
     // Add scroll bar to nav if nav height > window height
-    if ($(window).height() < 320) {
-      $('.navbar-collapse').css('max-height', $(window).height());
+    if ($(window).height() < 386) {
+      $('.navbar-collapse').css('max-height', $(window).height() - 82);  // 82 = height of nav
     } else {
       $('.navbar-collapse').css('max-height', '');
     }
