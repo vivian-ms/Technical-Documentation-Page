@@ -18,8 +18,8 @@ $(function() {
     $(this).children()[0].click();
   });
 
-  $('#main-doc').on('click', function(evt) {
-    // Close the collapsable navbar when main document is clicked
+  $('.nav-item, #main-doc').on('click', function(evt) {
+    // Close the collapsable navbar when nav-item or main document is clicked
     $('#collapsable_navbar').collapse('hide');
   })
 });
