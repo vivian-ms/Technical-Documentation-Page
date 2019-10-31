@@ -32,20 +32,8 @@ function checkMediaQuery() {
     // Collapse the collapsable navbar (navbar will be a sidebar)
     $('#collapsable_navbar').collapse('hide');
 
-    // .navbar-brand: add margin-bottom and remove cursor property
-    $('.navbar-brand').css({
-      'margin-bottom': '10px',
-      'cursor': ''
-    });
-
-    // .navbar-brand h1: reduce font size
-    $('.navbar-brand h1').css('font-size', '1.5rem');
-
     // .navbar-nav: set width equal to width of .navbar-brand
     $('.navbar-nav').css('width', $('.navbar-brand').css('width'));
-
-    // .nav-item: add border-top
-    $('.nav-item').css('border-top', '1px solid mediumpurple');
 
     // Change fixed-top navbar to fixed-left
     $('.navbar').removeClass('fixed-top').addClass('fixed-left flex-column');
@@ -65,27 +53,15 @@ function checkMediaQuery() {
 
   // Else (window width < 768px)
   } else {
-    // .navbar-brand: add cursor property and remove margin-bottom
-    $('.navbar-brand').css({
-      'margin-bottom': '',
-      'cursor': 'pointer'
-    });
-
-    // .navbar-brand h1: revert to default size
-    $('.navbar-brand h1').css('font-size', '');
-
-    // Add scroll bar to nav if nav height > window height
+    // If window height < 386 (nav height), set max height to add scroll bar
     if ($(window).height() < 386) {
       $('.navbar-collapse').css('max-height', $(window).height() - 82);  // 82 = height of nav
     } else {
       $('.navbar-collapse').css('max-height', '');
-    }
+    }  // End if else for setting .navbar-collapse max-height
 
     // .navbar-nav: remove width property
     $('.navbar-nav').css('width', '');
-
-    // .nav-item: remove border-top property
-    $('.nav-item').css('border-top', '');
 
     // Change fixed-left navbar to fixed-top
     $('.navbar').removeClass('fixed-left flex-column').addClass('fixed-top');

@@ -12,6 +12,10 @@ body {
   background: #cfc9ff;
 }
 
+.navbar-brand {
+  cursor: pointer;
+}
+
 .navbar-brand h1 {
   font-family: 'Oswald', sans-serif;
 }
@@ -110,3 +114,21 @@ body {
   font-size: 0.7rem;
 }
 /* ########## End main ########## */
+
+
+/* ########## Media queries ########## */
+@media screen and (min-width: 768px) {
+  .navbar-brand {
+    margin-bottom: 10px;
+    cursor: auto;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-item {
+    border-top: 1px solid mediumpurple;
+  }
+}
+/* ########## End media queries ########## */
