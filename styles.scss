@@ -1,0 +1,160 @@
+// Variables
+$OpenSans: 'Open Sans', sans-serif;
+$Oswald: 'Oswald', sans-serif;
+$nav-color: #cfc9ff;
+$main-color: #bbb3ff;
+
+// Mixins
+@mixin mQ_minWidth($w) {
+  @media screen and (min-width: $w) {
+    @content;
+  }
+}
+
+// Functions
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+body {
+  position: relative;
+  font-family: $OpenSans;
+  background: lavender;
+}
+
+
+.fixed-left {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+
+.navbar {
+  background: $nav-color;
+  cursor: pointer;
+
+  @include mQ_minWidth(768px) {
+    cursor: auto;
+  }
+
+  .navbar-brand {
+    margin-left: 1rem;
+
+    @include mQ_minWidth(768px) {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: $Oswald;
+
+      @include mQ_minWidth(768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }  // End .navbar-brand
+
+  .navbar-nav {
+    .nav-item {
+      cursor: pointer;
+
+      @include mQ_minWidth(768px) {
+        border-top: 1px solid mediumpurple;
+      }
+
+      &:hover {
+        background: tint($nav-color, 20%);
+      }
+
+      .nav-link {
+        color: blue;
+      }
+    }  // End .nav-item
+  }  // End .navbar-nav
+}  // End .navbar
+
+
+#main-doc {
+  margin-top: 5px;
+  padding: 10px;
+  line-height: 2.5rem;
+
+  .section_title {
+    padding: 15px 10px;
+    background: $main-color;
+    font: {
+      family: $Oswald;
+      size: 1.5rem;
+      weight: bold;
+    }
+  }
+
+  .section_subtitle {
+    padding: 10px 5px;
+    background: tint($main-color, 20%);
+    font: {
+      size: 1.2rem;
+      weight: bold;
+    }
+  }
+
+  .divider {
+    margin: {
+      top: 50px;
+      bottom: 50px;
+    }
+    border: none;
+    height: 5px;
+    background: mediumpurple;
+    color: mediumpurple;
+  }
+
+  code {
+    padding: 5px;
+  }
+
+  .code {
+    padding: 20px;
+    line-height: 1.5rem;
+  }
+
+  code, .code {
+    background: tint($main-color, 50%);
+    color: blue;
+  }
+
+  .iframe-container {
+    max-width: 650px;
+  }
+
+  iframe {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+  }
+
+  .note {
+    padding: 10px;
+    background: shade($main-color, 1%);
+  }
+
+  .reference_list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+
+  .author {
+    font-size: 0.7rem;
+  }
+}  // End #main

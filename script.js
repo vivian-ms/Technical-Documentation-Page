@@ -6,8 +6,8 @@ $(function() {
   // Readjust main document properties after collapsing navbar
   $('#collapsable_navbar').on('hidden.bs.collapse', checkMediaQuery);
 
-  $('.navbar-brand').on('click', function(evt) {
-    // If window width < 768px, toggle collapsable navbar when .navbar-brand is clicked
+  $('#navbar').on('click', function(evt) {
+    // If window width < 768px, toggle collapsable navbar when #navbar is clicked
     if (!window.matchMedia('(min-width: 768px)').matches) {
       $('#collapsable_navbar').collapse('toggle');
     }
@@ -36,7 +36,7 @@ function checkMediaQuery() {
     $('.navbar-nav').css('width', $('.navbar-brand').css('width'));
 
     // Change fixed-top navbar to fixed-left
-    $('.navbar').removeClass('fixed-top').addClass('fixed-left flex-column');
+    $('.navbar').removeClass('fixed-top').addClass('fixed-left flex-column px-0');
 
     // Vertically stack all nav links and vertically stretch .navbar-nav to fill the screen
     $('.navbar-nav').addClass('flex-column align-self-stretch');
@@ -64,7 +64,7 @@ function checkMediaQuery() {
     $('.navbar-nav').css('width', '');
 
     // Change fixed-left navbar to fixed-top
-    $('.navbar').removeClass('fixed-left flex-column').addClass('fixed-top');
+    $('.navbar').removeClass('fixed-left flex-column px-0').addClass('fixed-top');
 
     // Change vertically stacked nav links to horizontally align
     $('.navbar-nav').removeClass('flex-column align-self-stretch');

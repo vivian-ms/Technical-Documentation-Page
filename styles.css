@@ -1,134 +1,89 @@
 body {
   position: relative;
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  background: lavender;
-}
-
-
-
-/* ########## Navbar ########## */
-.navbar {
-  background: #cfc9ff;
-}
-
-.navbar-brand {
-  cursor: pointer;
-}
-
-.navbar-brand h1 {
-  font-family: 'Oswald', sans-serif;
-}
-
-.navbar-nav .nav-item .nav-link {
-  color: blue;
-}
-
-.navbar-nav .nav-item:hover {
-  color: blue;
-  text-decoration: underline;
-  background: #d9d4ff;
-}
+  font-family: "Open Sans", sans-serif;
+  background: lavender; }
 
 .fixed-left {
   position: fixed;
   top: 0px;
   bottom: 0px;
-  left: 0px;
-}
-/* ########## End Navbar ########## */
+  left: 0px; }
 
+.navbar {
+  background: #cfc9ff;
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .navbar {
+      cursor: auto; } }
+  .navbar .navbar-brand {
+    margin-left: 1rem; }
+    @media screen and (min-width: 768px) {
+      .navbar .navbar-brand {
+        margin-bottom: 10px; } }
+    .navbar .navbar-brand h1 {
+      font-family: "Oswald", sans-serif; }
+      @media screen and (min-width: 768px) {
+        .navbar .navbar-brand h1 {
+          font-size: 1.5rem; } }
+  .navbar .navbar-nav .nav-item {
+    cursor: pointer; }
+    @media screen and (min-width: 768px) {
+      .navbar .navbar-nav .nav-item {
+        border-top: 1px solid mediumpurple; } }
+    .navbar .navbar-nav .nav-item:hover {
+      background: #d9d4ff; }
+    .navbar .navbar-nav .nav-item .nav-link {
+      color: blue; }
 
-
-/* ########## Main ########## */
 #main-doc {
   margin-top: 5px;
   padding: 10px;
-  line-height: 2.5rem;
-}
-
-.section_title {
-  padding: 15px 10px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: #bbb3ff;
-}
-
-.section_subtitle {
-  padding: 10px 5px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: #d4ceff;
-}
-
-.divider {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border: none;
-  height: 5px;
-  background: mediumpurple;
-  color: mediumpurple;
-}
-
-#main-doc code {
-  padding: 5px;
-}
-
-.code {
-  padding: 20px;
-  line-height: 1.5rem;
-}
-
-#main-doc code, .code {
-  background: #d9d4ff;
-  color: blue;
-}
-
-.iframe-container {
-  max-width: 650px;
-}
-
-#main-doc iframe {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: none;
-}
-
-.note {
-  padding: 10px;
-  background: #c9c4e8;
-}
-
-.reference_list {
-  display: flex;
-  flex-flow: row wrap;
-  list-style-type: none;
-}
-
-.reference_list li {
-  margin-right: 20px;
-}
-
-.author {
-  font-size: 0.7rem;
-}
-/* ########## End main ########## */
-
-
-/* ########## Media queries ########## */
-@media screen and (min-width: 768px) {
-  .navbar-brand {
-    margin-bottom: 10px;
-    cursor: auto;
-  }
-
-  .navbar-brand h1 {
+  line-height: 2.5rem; }
+  #main-doc .section_title {
+    padding: 15px 10px;
+    background: #bbb3ff;
+    font-family: "Oswald", sans-serif;
     font-size: 1.5rem;
-  }
-
-  .nav-item {
-    border-top: 1px solid mediumpurple;
-  }
-}
-/* ########## End media queries ########## */
+    font-weight: bold; }
+  #main-doc .section_subtitle {
+    padding: 10px 5px;
+    background: #c9c2ff;
+    font-size: 1.2rem;
+    font-weight: bold; }
+  #main-doc .divider {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: none;
+    height: 5px;
+    background: mediumpurple;
+    color: mediumpurple; }
+  #main-doc code {
+    padding: 5px; }
+  #main-doc .code {
+    padding: 20px;
+    line-height: 1.5rem; }
+  #main-doc code, #main-doc .code {
+    background: #ddd9ff;
+    color: blue; }
+  #main-doc .iframe-container {
+    max-width: 650px; }
+  #main-doc iframe {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none; }
+  #main-doc .note {
+    padding: 10px;
+    background: #b9b1fc; }
+  #main-doc .reference_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    list-style-type: none; }
+    #main-doc .reference_list li {
+      margin-right: 20px; }
+  #main-doc .author {
+    font-size: 0.7rem; }
